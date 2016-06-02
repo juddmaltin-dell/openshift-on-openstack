@@ -313,7 +313,7 @@ heat stack-create my-openshift \
 == Accessing the Web UI
 
 You can get the URL for the OpenShift Console (the web UI) from Heat by running
-`heat output-show my-openshift master_console_url`.
+`heat output-show my-openshift console_url`.
 
 Currently, the UI and the resolution for the public hostnames that will be associated
 to services running in OpenShift is dependent on the DNS created internally by
