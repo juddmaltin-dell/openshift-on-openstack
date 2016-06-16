@@ -15,10 +15,10 @@
     ignore_errors: true
     when: ansible_first_run | default(false) | bool
 
-  - name: Setup RDO repositories
-    yum: name=https://rdoproject.org/repos/rdo-release.rpm state=present
-    when: deployment_type == 'origin' and rpm_check.rc != 0
-    when: ansible_first_run | default(false) | bool
+  #- name: Setup RDO repositories
+    #yum: name=https://rdoproject.org/repos/rdo-release.rpm state=present
+    #when: deployment_type == 'origin' and rpm_check.rc != 0
+    #when: ansible_first_run | default(false) | bool
 
   - name: Install Nova and Cinder clients
     yum: name=python-novaclient,python-cinderclient,python-keystoneclient state=latest
